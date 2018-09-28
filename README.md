@@ -18,7 +18,36 @@
 - Program Transformation: After finding NCCs, T-Fuzz should "remove" the NCCs conditions to guide the execution to the another branch. T-Fuzz transforms programs by replacing the detected NCC candidates with negated conditional jump.
 - Filtering out False Positives and Reproducing Bugs: As the removed NCC candidates might be meaningful guards in the original program(as opposed to, e.g., magic number checks), removing detected NCC edges might introduce new bugs in the transformed program. Consequently, T-Fuzz's Crash Analyzer verifies that each bug in the transformaed program is also present in the original proram, thus filtering out false positives. The Crash Analyser uses a transformation-aware combination of the preconstrained tracing technique leveraged by Driller and the Path Kneading techniques proposed by ShellSwap to collect path constraints of the original program by tracing the program path leading to a crash in the transformed program.
 
-### CollAFL(S&P 18)
+### CollAFL: Path Sensitive Fuzzing(S&P 18)
+
+该paper主要对AFL有两个改进:
+
+- AFL是coverage-based greybox fuzzing，它通过对源程序进行轻量级的插桩，来跟踪每次fuzzing的input覆盖哪些路径，然后将路径hash，从而判断每个input是否到达了一个新的路径，如果到达新的路径，则说明该input较好，将该input作为seed。但由于hash可能会发生collision，可能会导致某些input到达新的路径，却没有将该input作为seed。该paper主要针对这一点，采用了一个新的算法，解决了路径hash collision问题，产生的效果也是比较显著的。
+- 提供了一些策略来将seed进行排序，促使fuzzer去探索没有到达的路径。具体做法就是如果某条路径有很多没有探索到的邻居分支，则对该input进行更多的变异；如果某条路径有很多没有探索到的邻居后代，则对该input产生更多的变异。还有一个策略来帮助发现更多的漏洞：如果某条路径进行更多的内存访问，则对该input产生更多的变异。
+
+我个人认为，该论文的主要贡献是提供了一个机制来解决路径的hash collision问题，使得coverage判断更加准确。
+
+#### AFL Coverage Measurements
+
+AFL使用bitmap(默认64KB)来跟踪edge coverage。没一个字节都对应特定edge的hit count。AFL通过对每个basic block进行插桩，为每个basic block都随机分配一个id，当执行每条路径时，对该路径上的每个basic block都进行如下操作:
+
+```c
+cur_location= <COMPILE_TIME_RANDOM>;
+shared_mem[cur_location ^ prev_location]++;
+prev_location = cur_location >> 1;
+```
+其中上面的prev_location右移一位主要是为了区分路径A->B和B->A。由于每个basic block的id是随机分配的，所以这种hash方法很容易产生collision，特别当程序比较大的时候，collision rate也越大。
+
+#### CollAFL's Solution to Hash Collision
+
+CollAFL通过三种方式来解决hash collision:
+
+1.  ![公式1](./image/s1.png)
+    通过贪心算法，为每个basic block分配x和y的值，保证每条edge计算的hash值都是不同的。
+2. 如果每个basic block只有一个前继basic block，即只有一条边到达该basic block，所以只需要将该basic block的id来表示该edge即可。
+3. 如果前面两种方法无法解决，则动态的时候为每条边分配不同的id。
+
+
 
 
 ## Directed Fuzzing
