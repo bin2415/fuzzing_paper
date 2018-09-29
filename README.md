@@ -141,6 +141,10 @@ Output: Crashing Inputs Sx
 - For P3, a moderation to the current power scheduling is required. The distance-guided seed prioritization is also needed.
 - For P4, the DGF needs an adaptive mutation strategy, which optimally applies the fine-grained abd ciarse-graubed nytatuibs wgeb tge dustabce between the seed to the targets is different.
 
+### Hawkeye's Design
+
+![overview](https://github.com/bin2415/fuzzing_paper/blob/master/image/s1.png)
+
 
 # Fuzzing Machine Learning Model
 
