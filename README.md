@@ -143,7 +143,7 @@ Output: Crashing Inputs Sx
 
 ### Hawkeye's Design
 
-![overview](https://github.com/bin2415/fuzzing_paper/blob/master/image/s1.png)
+![overview](https://github.com/bin2415/fuzzing_paper/blob/master/image/hawkeye_overview.png)
 
 
 # Fuzzing Machine Learning Model
