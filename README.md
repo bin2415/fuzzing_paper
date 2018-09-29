@@ -11,6 +11,7 @@
 
 - [Fuzzing Machine Learning Model](#fuzzing-machine-learning-model)
     - [TensorFuzz: Debugging Neural Networks with Coverage-Guided Fuzzing(18)](#tensorfuzz-debugging-neural-networks-with-coverage-guided-fuzzing18)
+    - [Coverage-Guided Fuzzing for Deep Neural Networks](#coverage-guided-fuzzing-for-deep-neural-networks18))
 
 ## Interesting Fuzzing
 
@@ -112,3 +113,7 @@ Output: Crashing Inputs Sx
 #### TensorFuzz: Debugging Neural Networks with Coverage-Guided Fuzzing(18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/tensorfuzz.pdf)
+
+#### Coverage-Guided Fuzzing for Deep Neural Networks(18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/18_coverage-guided-fuzzing-for-deep-neural-networks.pdf)
