@@ -7,7 +7,7 @@
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
-    - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye:-towards-a-desired-directed-Grey-box-fuzzerccs-18)
+    - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye-towards-a-desired-directed-grey-box-fuzzerccs-18)
 ## Interesting Fuzzing
 
 ### Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
