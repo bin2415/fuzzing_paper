@@ -1,3 +1,11 @@
+- [Interesting Fuzzing](#interesting-fuzzing)
+    - [Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)](#coverage-based-greybox-fuzzing-as-markov-chain(ccs-16))
+    - [T-Fuzz: fuzzing by program transformation(S&P 18)](#t-fuzz:-fuzzing-by-program-transformation(s&p-18))
+    - [CollAFL: Path Sensitive Fuzzing(S&P 18)](#collafl:-path-sensitive-fuzzing(s&p-18))
+
+- [Directed Fuzzing](#directed-fuzzing)
+    - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzing(ccs-17))
+    - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye:-towards-a-desired-directed-Grey-box-fuzzer(ccs-18))
 ## Interesting Fuzzing
 
 ### Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
