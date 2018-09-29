@@ -73,6 +73,8 @@ CollAFL通过三种方式来解决hash collision:
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/NDSS16_driller.pdf)
 
+我们都知道，fuzzing对于一些比较宽松的限制(比如x>0)能够很容易的通过变异产生一些输入达到该条件；而symbolic execution非常擅长求解一下magic value(比如x == deadleaf)。这是一篇比较经典的将concolic execution和fuzzing结合在一起的文章，该文章的主要思想就是先用AFL等Fuzzer根据seed进行变异，来测试程序。当产生的输入一直走某些路径，并没有探测到新的路径时，此时就"stuck"了。这时，就是用concolic execution来产生输入，保证该输入能走到一些新的分支。从而利用concolic execution来辅助fuzz。
+
 ## VUzzer: Application-aware Evolutionary Fuzzing(ndss 17)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/ndss17_vuzzer.pdf)
