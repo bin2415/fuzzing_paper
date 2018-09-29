@@ -9,6 +9,9 @@
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
     - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye-towards-a-desired-directed-grey-box-fuzzerccs-18)
 
+- [Fuzzing Machine Learning Model](#fuzzing-machine-learning-model)
+    - [TensorFuzz: Debugging Neural Networks with Coverage-Guided Fuzzing(18)](#tensorfuzz-debugging-neural-networks-with-coverage-guided-fuzzing18)
+
 ## Interesting Fuzzing
 
 ### Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
@@ -103,3 +106,9 @@ Output: Crashing Inputs Sx
 ### Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/ccs18_hawkeye.pdf)
+
+### Fuzzing Machine Learning Model
+
+#### TensorFuzz: Debugging Neural Networks with Coverage-Guided Fuzzing(18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/tensorfuzz.pdf)
