@@ -1,11 +1,12 @@
 - [Interesting Fuzzing](#interesting-fuzzing)
-    - [Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)](#coverage-based-greybox-fuzzing-as-markov-chain(ccs-16))
-    - [T-Fuzz: fuzzing by program transformation(S&P 18)](#t-fuzz:-fuzzing-by-program-transformation(s&p-18))
-    - [CollAFL: Path Sensitive Fuzzing(S&P 18)](#collafl:-path-sensitive-fuzzing(s&p-18))
+    - [Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)](coverage-based-greybox-fuzzing-as-markov-chainccs-16)
+    - [T-Fuzz: fuzzing by program transformation(S&P 18)](#t-fuzz-fuzzing-by-program-transformationsp-18)
+    - [CollAFL: Path Sensitive Fuzzing(S&P 18)](#collafl-path-sensitive-fuzzingsp-18)
+    - [Driller: Argumenting Fuzzing Through Selective Symbolic Execution(ndss 16)](driller-argumenting-fuzzing-through-selective-symbolic-executionndss-16)
 
 - [Directed Fuzzing](#directed-fuzzing)
-    - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzing(ccs-17))
-    - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye:-towards-a-desired-directed-Grey-box-fuzzer(ccs-18))
+    - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
+    - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye:-towards-a-desired-directed-Grey-box-fuzzerccs-18)
 ## Interesting Fuzzing
 
 ### Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
@@ -62,11 +63,11 @@ CollAFL通过三种方式来解决hash collision:
 3. 如果前面两种方法无法解决，则动态的时候为每条边分配不同的id。
 
 
-### Driller: Argumenting Fuzzing Through Selective Symbolic Execution
+### Driller: Argumenting Fuzzing Through Selective Symbolic Execution(ndss 16)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/NDSS16_driller.pdf)
 
-### VUzzer: Application-aware Evolutionary Fuzzing
+### VUzzer: Application-aware Evolutionary Fuzzing(ndss 17)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/ndss17_vuzzer.pdf)
 
