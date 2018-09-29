@@ -79,6 +79,16 @@ CollAFL通过三种方式来解决hash collision:
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/ndss17_vuzzer.pdf)
 
+Vuzzer是公认的比较好的类AFL fuzzer。它主要利用Data-flow features和Control-flow features来辅助fuzzer变异和进行seed的选择。
+
+### Data-flow features
+
+利用dynamic taint analysis 来推断input的结构和类型，以及某段数据在input的偏移。比如，它通过对每个cmp指令进行插桩来判断input的哪些字节与输入有关，并且知道与它比较的另外一个值。同时，Vuzzer也可以对lea指令进行插桩，从而检测*index*操作是不是与input某些bytes有关。
+
+### Control-flow features
+
+Control-flow features可以让Vuzzer推断出执行路径的重要性。比如，某些执行路径最后到达了*error-hanling blocks*。Vuzzer就通过静态的方法识别出了一下*error-handling code*。同时，Vuzzer通过对每个basic block赋予特定的权重，来促使fuzzer走到更深的路径中去。 
+
 # Directed Fuzzing
 
 ## Directed Greybox Fuzzing(CCS 17)
