@@ -10,6 +10,8 @@
 
 ### Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
 
+* [paper](./paper/CCS16_aflfast)
+
 - Search Strategy
 - Power Schedule
 - 通过改变前面两个方法来使程序更大概率地走到low-density region.
