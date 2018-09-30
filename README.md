@@ -94,6 +94,13 @@ Control-flow features可以让Vuzzer推断出执行路径的重要性。比如�
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland18_Angora.pdf)
 
+This paper's contributations:
+
+- *Context-sensitive branch coverage.* AFL uses context-insensitive branch coverage to approximate program states. This paper adding context information to branch.
+- *Scalable byte-level taint tracking.* Most path constraints depend on only a few bytes in the input. By tracking which input bytes flow into each path constraint, Angora mutates only these bytes instead of the entire input, therefore reducing the space of exploration substantially.
+- *Search based on gradient descent.* When mutating the input to satisfy a path constraint. Angora avoids symbolic execution, which is expensive and cannot solve many types of constraints. Instead, Angora uses the gradient descent algorithm popular in machine learning to solve path constraints.
+- *Type and shape inference.* Many bytes in the input are used collectively as a single value in the program, e.g., a group of four bytes in the input used as a 32-bit signed integer in the program. To allow gradient descent to search efficiently, Angora locates the above group and infers its type.
+
 
 # Directed Fuzzing
 
