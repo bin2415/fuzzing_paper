@@ -4,6 +4,7 @@
     - [CollAFL: Path Sensitive Fuzzing(S&P 18)](#collafl-path-sensitive-fuzzingsp-18)
     - [Driller: Argumenting Fuzzing Through Selective Symbolic Execution(ndss 16)](#driller-argumenting-fuzzing-through-selective-symbolic-executionndss-16)
     - [VUzzer: Application-aware Evolutionary Fuzzing(ndss 17)](#vuzzer-application-aware-evolutionary-fuzzingndss-17)
+    - [Angora: Efficient Fuzzing by Principled Search(S&P 18)](#angora-efficient-fuzzing-by-principled-searchsp-18))
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -87,7 +88,12 @@ Vuzzer是公认的比较好的类AFL fuzzer。它主要利用Data-flow features�
 
 ### Control-flow features
 
-Control-flow features可以让Vuzzer推断出执行路径的重要性。比如，某些执行路径最后到达了*error-hanling blocks*。Vuzzer就通过静态的方法识别出了一下*error-handling code*。同时，Vuzzer通过对每个basic block赋予特定的权重，来促使fuzzer走到更深的路径中去。 
+Control-flow features可以让Vuzzer推断出执行路径的重要性。比如，某些执行路径最后到达了*error-hanling blocks*。Vuzzer就通过静态的方法识别出了一下*error-handling code*。同时，Vuzzer通过对每个basic block赋予特定的权重，来促使fuzzer走到更深的路径中去。
+
+## Angora: Efficient Fuzzing by Principled Search(S&P 18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland18_Angora.pdf)
+
 
 # Directed Fuzzing
 
