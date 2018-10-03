@@ -6,6 +6,7 @@
     - [VUzzer: Application-aware Evolutionary Fuzzing(ndss 17)](#vuzzer-application-aware-evolutionary-fuzzingndss-17)
     - [Angora: Efficient Fuzzing by Principled Search(S&P 18)](#angora-efficient-fuzzing-by-principled-searchsp-18))
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
+    - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix0-18)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -112,6 +113,11 @@ This paper's contributations:
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs17_prefFuzz.pdf)
 * [source code](https://github.com/sslab-gatech/perf-fuzz)
+
+## QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix18_qsym.pdf)
+* [source code](https://github.com/sslab-gatech/qsym)
 
 # Directed Fuzzing
 
