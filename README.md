@@ -128,6 +128,24 @@ This paper's contributations:
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix18_qsym.pdf)
 * [source code](https://github.com/sslab-gatech/qsym)
 
+该paper是Usenix 18的Distinguished Paper，其主要针对了当前的concolic execution的三个方面进行了优化: Slow Symbolic Emulation, Ineffective Snapshot and Slow and Inflexible Sound Analysis. 从而使得concolic execution更好的适应fuzzing场景。
+
+### Motivation: Performance Bottlenecks
+
+#### Slow Symbolic Emulation
+
+现在主流的conclic executors做符号执行的时候是针对IR中间语言做的(比如KLEE的LLVM IR和angr的VEX IR)，对中间语言模拟执行。其*采用IR的原因是实现起来比较简单*。由于Intel 64位指令集包含1795条指令，所以针对每条指令总结出来符号的语义对于人工来说是一个非常大的工作量，而IR的指令较少(LLVM IR有62条指令)，符号化这些指令相对比较简单。
+
+然而使用IR则引发了额外的overhead。首先，从机器指令到IR的转换本身就有overhead。由于amd64是CISC(complex instruction set computer)，而IR是RISC(reduced instruction set computer)，一般一条amd64的指令需要转换成多条IR指令，拿angr为例，如果将amd64指令转为VEX IR，则平均增加的指令数是4.69倍。其次，采用IR导致basic block level taint。因为由于效率的原因，从native instructions到IR的转换一般是以basic block为单位的，这样就导致无法将单个的native instruction转换成IR，所以也就只能做到哪些basic block需要符号化，而不是具体的某条指令需要符号化。这样做导致的后果就是如果某个basic block中只有一条指令和输入有关需要符号化，则整个basic block都需要符号模拟，这样就会造成很高的overhead。如果没有IR的话就可以做到指令级别的taint，就能够清楚的判断哪些指令需要符号模拟，哪些指令只需native execution，减少了不必要的符号模拟。实验表明，在一个basic block中，只有30%的指令需要符号模拟。
+
+#### Ineffective Snapshot
+
+snapshot是conclic execution常用的一个技术，它能够保存某条分支前的状态S，当该分支执行完或者"stuck"时，可以从该状态S直接执行另外一个分支，避免了重新执行的overhead。然而snapshot本身就有一些缺点：snapshot需要保存一些外部的状态(文件系统，内存管理系统)，则此时需要对影响外部状态的系统调用进行处理，一般有两个方法: full system concolic execution and External environment modeling。这两个方法都有一些缺陷：第一个方法是由于外部环境比较复杂，实现起来比较难，overhead较高；第二个则是model的system call较少，并且有些system call建模的不够完全。另外由于fuzzing的输入一般不会共享同一个分支，所以snapshot可能对于fuzzing这个场景也不是很好，所以该paper就没有采用snapshot的机制，对于每个输入都会重新执行，对于系统调用，则具体执行。
+
+#### Slow and Inflexible Sound Analysis
+
+现在的concolic execution是将某条路径上的所有contraints都满足，从而求解出具体的input。然而复杂的contraints可能会导致输入求解不出。所以该paper的一个解决方法就是
+
 # Directed Fuzzing
 
 ## Directed Greybox Fuzzing(CCS 17)
