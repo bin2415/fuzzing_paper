@@ -16,6 +16,11 @@
     - [TensorFuzz: Debugging Neural Networks with Coverage-Guided Fuzzing(18)](#tensorfuzz-debugging-neural-networks-with-coverage-guided-fuzzing18)
     - [Coverage-Guided Fuzzing for Deep Neural Networks](#coverage-guided-fuzzing-for-deep-neural-networks18)
 
+- [Kernel Fuzzing](#kernel-fuzzing)
+    - [RAZZER: Finding Kernel Race Bugs through Fuzzing(oakland 19)](#razzer-finding-kernel-race-bugs-through-fuzzingoakland-19)
+
+
+
 # Interesting Fuzzing
 
 ## Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
@@ -219,3 +224,10 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 ## Coverage-Guided Fuzzing for Deep Neural Networks(18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/18_coverage-guided-fuzzing-for-deep-neural-networks.pdf)
+
+# Kernel Fuzzing
+
+## RAZZER: Finding Kernel Race Bugs through Fuzzing(oakland 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/oakland19.pdf)
+* [source code](https://github.com/compsec-snu/razzer)
