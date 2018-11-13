@@ -229,5 +229,5 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 
 ## RAZZER: Finding Kernel Race Bugs through Fuzzing(oakland 19)
 
-* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/oakland19.pdf)
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland19_RAZZER.pdf)
 * [source code](https://github.com/compsec-snu/razzer)
