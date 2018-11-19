@@ -155,7 +155,7 @@ snapshot是conclic execution常用的一个技术，它能够保存某条分支�
 
 ## FAIRFUZZ: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)
 
-* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ase18_fairfuzz.pdf)
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ase18-fairfuzz.pdf)
 * [source code](https://github.com/carolemieux/afl-rb)
 
 # Directed Fuzzing
