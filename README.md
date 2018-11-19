@@ -7,6 +7,7 @@
     - [Angora: Efficient Fuzzing by Principled Search(S&P 18)](#angora-efficient-fuzzing-by-principled-searchsp-18))
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
     - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
+    - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -151,6 +152,11 @@ snapshot是conclic execution常用的一个技术，它能够保存某条分支�
 #### Slow and Inflexible Sound Analysis
 
 现在的concolic execution是将某条路径上的所有contraints都满足，从而求解出具体的input。然而复杂的contraints可能会导致输入求解不出。所以该paper的一个解决方法就是只求解出部分contraints。
+
+## FAIRFUZZ: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ase18_fairfuzz.pdf)
+* [source code](https://github.com/carolemieux/afl-rb)
 
 # Directed Fuzzing
 
