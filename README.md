@@ -158,6 +158,12 @@ snapshot是conclic execution常用的一个技术，它能够保存某条分支�
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ase18-fairfuzz.pdf)
 * [source code](https://github.com/carolemieux/afl-rb)
 
+FairFuzz focus on branch coverage, it works in two main steps.
+
+First, it identifies the program branches that are rarely hit by previously-generated inputs.  It call such branches rare branches. These rare branches guard under-explored functionalities of the program. By generating more random inputs hitting these rare branches, FairFuzz greatly increases the coverage of the parts of the code guarded by them.
+
+Second, FairFuzz uses a novel lightweight mutation technique to increase the probability of hitting these rare branches. The mutation stategy is based on the observation that certain parts of an input already hitting a rare branch are crucial to satify the conditions necessary to hit that branch. Therefore, to generate more inputs hitting the rare branch via mutation, the parts of the input that are crucial for hitting the branch should not be mutated.
+
 # Directed Fuzzing
 
 ## Directed Greybox Fuzzing(CCS 17)
