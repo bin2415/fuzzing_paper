@@ -21,6 +21,9 @@
     - [RAZZER: Finding Kernel Race Bugs through Fuzzing(oakland 19)](#razzer-finding-kernel-race-bugs-through-fuzzingoakland-19)
     - [kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels(Usenix Security 17)](#kafl-hardware-assisted-feedback-fuzzing-for-os-kernelsusenix-security-17)
 
+- [Evaluate Fuzzing](#evaluate-fuzzing)
+    - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
+
 
 
 # Interesting Fuzzing
@@ -249,4 +252,12 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix17_kafl.pdf)
 * [source code](https://github.com/RUB-SysSec/kAFL)
+
+# Evaluate Fuzzing
+
+## Evaluating Fuzz Testing(CCS 18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs18_Evaluating%20Fuzz%20Testing.pdf)
+
+
 
