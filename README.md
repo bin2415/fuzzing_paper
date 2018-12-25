@@ -259,5 +259,12 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs18_Evaluating%20Fuzz%20Testing.pdf)
 
+They found that:
 
+- Most papers failed perform multiple runs, and those that did failed to account for varying performance by using a statistical test.
+- Many papers measured fuzzer performance not by counting distinct bugs, but instead by counting "unique crashes" using heuristics such as
+AFL's coverage measure and stack hashes.
+- Many papers used short timeouts, without justification.
+- Many papers did not carefully consider the impact of seed choices on algorithmic improvements.
+- Papers varied widely on their choice of target programs.
 
