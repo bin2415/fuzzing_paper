@@ -21,6 +21,8 @@
     - [RAZZER: Finding Kernel Race Bugs through Fuzzing(oakland 19)](#razzer-finding-kernel-race-bugs-through-fuzzingoakland-19)
     - [kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels(Usenix Security 17)](#kafl-hardware-assisted-feedback-fuzzing-for-os-kernelsusenix-security-17)
     - [Fuzzing File Systems via Two-Dimensional Input Space Exploration(oakland 19)](#fuzzing-file-systems-via-two-dimensional-input-space-explorationoakland-19)
+    - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periScope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundary
+)
 
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
@@ -257,6 +259,10 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 ## Fuzzing File Systems via Two-Dimensional Input Space Exploration(oakland 19)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland19_fuzzing_file_system.pdf)
+
+## PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)
+
+* [paper](https://people.cs.kuleuven.be/~stijn.volckaert/papers/2019_NDSS_PeriScope.pdf)
 
 # Evaluate Fuzzing
 
