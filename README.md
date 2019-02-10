@@ -21,8 +21,7 @@
     - [RAZZER: Finding Kernel Race Bugs through Fuzzing(oakland 19)](#razzer-finding-kernel-race-bugs-through-fuzzingoakland-19)
     - [kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels(Usenix Security 17)](#kafl-hardware-assisted-feedback-fuzzing-for-os-kernelsusenix-security-17)
     - [Fuzzing File Systems via Two-Dimensional Input Space Exploration(oakland 19)](#fuzzing-file-systems-via-two-dimensional-input-space-explorationoakland-19)
-    - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periScope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundary
-)
+    - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periscope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundaryndss-19)
 
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
