@@ -262,6 +262,7 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 ## PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)
 
 * [paper](https://people.cs.kuleuven.be/~stijn.volckaert/papers/2019_NDSS_PeriScope.pdf)
+* [source code](https://github.com/securesystemslab/periscope)
 
 # Evaluate Fuzzing
 
