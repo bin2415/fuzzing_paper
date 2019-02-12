@@ -8,6 +8,7 @@
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
     - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
     - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
+    - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)]
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -168,6 +169,11 @@ FairFuzz focus on branch coverage, it works in two main steps.
 First, it identifies the program branches that are rarely hit by previously-generated inputs.  It call such branches rare branches. These rare branches guard under-explored functionalities of the program. By generating more random inputs hitting these rare branches, FairFuzz greatly increases the coverage of the parts of the code guarded by them.
 
 Second, FairFuzz uses a novel lightweight mutation technique to increase the probability of hitting these rare branches. The mutation stategy is based on the observation that certain parts of an input already hitting a rare branch are crucial to satify the conditions necessary to hit that branch. Therefore, to generate more inputs hitting the rare branch via mutation, the parts of the input that are crucial for hitting the branch should not be mutated.
+
+## Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)
+
+* [paper](https://arxiv.org/pdf/1812.11875.pdf)
+* [source code](https://github.com/FoRTE-Research/UnTracer-AFL)
 
 # Directed Fuzzing
 
