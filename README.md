@@ -8,7 +8,7 @@
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
     - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
     - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
-    - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)]
+    - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)](#full-speed-fuzzing-reducing-fuzzing-overhead-through-coverage-guided-tracingoakland-19)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
