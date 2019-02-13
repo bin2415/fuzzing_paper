@@ -9,8 +9,8 @@
     - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
     - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
     - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)](#full-speed-fuzzing-reducing-fuzzing-overhead-through-coverage-guided-tracingoakland-19)
-    - [ProFuzzer: On-the-fly Input Type Probing for Better Zero-day Vulnerability Discovery(oakland 19)]
-    - [NEUZZ: Efficient Fuzzing with Neural Program Smoothing(oakland 19)]
+    - [ProFuzzer: On-the-fly Input Type Probing for Better Zero-day Vulnerability Discovery(oakland 19)](#profuzzer-on-the-fly-input-type-probing-for-better-zero-day-vulnerability-discoveryoakland-19)
+    - [NEUZZ: Efficient Fuzzing with Neural Program Smoothing(oakland 19)](#neuzz-efficient-fuzzing-with-neural-program-smoothingoakland-19 )
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
