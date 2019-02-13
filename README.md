@@ -184,6 +184,7 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 ## NEUZZ: Efficient Fuzzing with Neural Program Smoothing(oakland 19)
 
 * [paper](https://www.computer.org/csdl/proceedings/sp/2019/6660/00/666000a901.pdf)
+* [code](https://github.com/Dongdongshe/neuzz)
 
 # Directed Fuzzing
 
