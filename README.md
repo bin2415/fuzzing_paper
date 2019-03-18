@@ -1,16 +1,19 @@
 - [Interesting Fuzzing](#interesting-fuzzing)
     - [Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)](#coverage-based-greybox-fuzzing-as-markov-chainccs-16)
-    - [T-Fuzz: fuzzing by program transformation(S&P 18)](#t-fuzz-fuzzing-by-program-transformationsp-18)
-    - [CollAFL: Path Sensitive Fuzzing(S&P 18)](#collafl-path-sensitive-fuzzingsp-18)
+    - [T-Fuzz: fuzzing by program transformation(oakland 18)](#t-fuzz-fuzzing-by-program-transformationoakland-18)
+    - [CollAFL: Path Sensitive Fuzzing(oakland 18)](#collafl-path-sensitive-fuzzingoakland-18)
     - [Driller: Argumenting Fuzzing Through Selective Symbolic Execution(ndss 16)](#driller-argumenting-fuzzing-through-selective-symbolic-executionndss-16)
     - [VUzzer: Application-aware Evolutionary Fuzzing(ndss 17)](#vuzzer-application-aware-evolutionary-fuzzingndss-17)
-    - [Angora: Efficient Fuzzing by Principled Search(S&P 18)](#angora-efficient-fuzzing-by-principled-searchsp-18))
+    - [Angora: Efficient Fuzzing by Principled Search(oakland 18)](#angora-efficient-fuzzing-by-principled-searchoakland-18))
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
     - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
     - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
     - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)](#full-speed-fuzzing-reducing-fuzzing-overhead-through-coverage-guided-tracingoakland-19)
     - [ProFuzzer: On-the-fly Input Type Probing for Better Zero-day Vulnerability Discovery(oakland 19)](#profuzzer-on-the-fly-input-type-probing-for-better-zero-day-vulnerability-discoveryoakland-19)
     - [NEUZZ: Efficient Fuzzing with Neural Program Smoothing(oakland 19)](#neuzz-efficient-fuzzing-with-neural-program-smoothingoakland-19 )
+    - [REDQUEEN: Fuzzing with Input-to-State Correspondence(NDSS 19)](#redqueen-fuzzing-with-input-to-state-correspondencendss-19)
+    - [NAUTILUS: Fishing for Deep Bugs with Grammars(NDSS 19)](#nautilus-fishing-for-deep-bugs-with-grammarsndss-19) 
+    - [Send Hardest Problems My Way: Probabilistic Path Prioritization for Hybrid Fuzzing(NDSS 19)](#send-hardest-problems-my-way-probabilistic-path-prioritization-for-hybrid-fuzzingndss-19)   
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -42,7 +45,7 @@
 - Power Schedule
 - 通过改变前面两个方法来使程序更大概率地走到low-density region.
 
-## T-Fuzz: fuzzing by program transformation(S&P 18)
+## T-Fuzz: fuzzing by program transformation(oakland 18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/oakland18_T-Fuzz.pdf)
 * [source code](https://github.com/HexHive/T-Fuzz)
@@ -57,7 +60,7 @@
 - Program Transformation: After finding NCCs, T-Fuzz should "remove" the NCCs conditions to guide the execution to the another branch. T-Fuzz transforms programs by replacing the detected NCC candidates with negated conditional jump.
 - Filtering out False Positives and Reproducing Bugs: As the removed NCC candidates might be meaningful guards in the original program(as opposed to, e.g., magic number checks), removing detected NCC edges might introduce new bugs in the transformed program. Consequently, T-Fuzz's Crash Analyzer verifies that each bug in the transformaed program is also present in the original proram, thus filtering out false positives. The Crash Analyser uses a transformation-aware combination of the preconstrained tracing technique leveraged by Driller and the Path Kneading techniques proposed by ShellSwap to collect path constraints of the original program by tracing the program path leading to a crash in the transformed program.
 
-## CollAFL: Path Sensitive Fuzzing(S&P 18)
+## CollAFL: Path Sensitive Fuzzing(oakland 18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/oakland18_collafl.pdf)
 * source code has not been found.
@@ -112,7 +115,7 @@ Vuzzer是公认的比较好的类AFL fuzzer。它主要利用Data-flow features�
 
 Control-flow features可以让Vuzzer推断出执行路径的重要性。比如，某些执行路径最后到达了*error-hanling blocks*。Vuzzer就通过静态的方法识别出了一下*error-handling code*。同时，Vuzzer通过对每个basic block赋予特定的权重，来促使fuzzer走到更深的路径中去。
 
-## Angora: Efficient Fuzzing by Principled Search(S&P 18)
+## Angora: Efficient Fuzzing by Principled Search(oakland 18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland18_Angora.pdf)
 * [source code](https://github.com/AngoraFuzzer/Angora)
@@ -185,6 +188,20 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 
 * [paper](https://www.computer.org/csdl/proceedings/sp/2019/6660/00/666000a901.pdf)
 * [code](https://github.com/Dongdongshe/neuzz)
+
+## REDQUEEN: Fuzzing with Input-to-State Correspondence(NDSS 19)
+
+* [paper](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04A-2_Aschermann_paper.pdf)
+* [code](https://github.com/RUB-SysSec/redqueen)
+
+## NAUTILUS: Fishing for Deep Bugs with Grammars(NDSS 19)
+
+* [paper](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04A-3_Aschermann_paper.pdf)
+* [code](https://github.com/RUB-SysSec/nautilus)
+
+## Send Hardest Problems My Way: Probabilistic Path Prioritization for Hybrid Fuzzing(NDSS 19)
+
+* [paper](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04A-5_Zhao_paper.pdf)
 
 # Directed Fuzzing
 
