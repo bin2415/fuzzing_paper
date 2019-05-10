@@ -29,8 +29,14 @@
     - [Fuzzing File Systems via Two-Dimensional Input Space Exploration(oakland 19)](#fuzzing-file-systems-via-two-dimensional-input-space-explorationoakland-19)
     - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periscope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundaryndss-19)
 
+- [Anti-Fuzzing](#anti-fuzzing)
+    - [FUZZIFICATION: Anti-Fuzzing Techniques(Usenix 19)](#fuzzification-anti-fuzzing-techniquesusenix-19)
+    - [ANTIFUZZ: Impeding Fuzzing Audits of Binary Executables](#antifuzz-impeding-fuzzing-audits-of-binary-executablesusenix-19)
+
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
+
+
 
 
 
@@ -297,6 +303,19 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 
 * [paper](https://people.cs.kuleuven.be/~stijn.volckaert/papers/2019_NDSS_PeriScope.pdf)
 * [source code](https://github.com/securesystemslab/periscope)
+
+
+# Anti-Fuzzing
+
+## FUZZIFICATION: Anti-Fuzzing Techniques(Usenix 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix19_antifuzzing.pdf)
+* [source code](https://github.com/sslab-gatech/fuzzification)
+
+## ANTIFUZZ: Impeding Fuzzing Audits of Binary Executables(Usenix 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix19_antifuzz.pdf)
+* [data](https://github.com/RUB-SysSec/antifuzz)
 
 # Evaluate Fuzzing
 
