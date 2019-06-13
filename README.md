@@ -6,7 +6,7 @@
     - [VUzzer: Application-aware Evolutionary Fuzzing(ndss 17)](#vuzzer-application-aware-evolutionary-fuzzingndss-17)
     - [Angora: Efficient Fuzzing by Principled Search(oakland 18)](#angora-efficient-fuzzing-by-principled-searchoakland-18))
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
-    - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
+    - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix Security 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
     - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
     - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(oakland 19)](#full-speed-fuzzing-reducing-fuzzing-overhead-through-coverage-guided-tracingoakland-19)
     - [ProFuzzer: On-the-fly Input Type Probing for Better Zero-day Vulnerability Discovery(oakland 19)](#profuzzer-on-the-fly-input-type-probing-for-better-zero-day-vulnerability-discoveryoakland-19)
@@ -14,6 +14,9 @@
     - [REDQUEEN: Fuzzing with Input-to-State Correspondence(NDSS 19)](#redqueen-fuzzing-with-input-to-state-correspondencendss-19)
     - [NAUTILUS: Fishing for Deep Bugs with Grammars(NDSS 19)](#nautilus-fishing-for-deep-bugs-with-grammarsndss-19) 
     - [Send Hardest Problems My Way: Probabilistic Path Prioritization for Hybrid Fuzzing(NDSS 19)](#send-hardest-problems-my-way-probabilistic-path-prioritization-for-hybrid-fuzzingndss-19)   
+    - [EnFuzz: Ensemble Fuzzing with Seed Synchronization among Diverse Fuzzers(Usenix Security 19)](#enfuzz-ensemble-fuzzing-with-seed-synchronization-among-diverse-fuzzersusenix-security-19)
+    - [MOPT: Optimize Mutation Scheduling for Fuzzers(Usenix Security 19)](#mopt-optimize-mutation-scheduling-for-fuzzersusenix-security-19)
+    - [GRIMOIRE: Synthesizing Structure while Fuzzing(Usenix Security 19)](#grimoire-synthesizing-structure-while-fuzzingusenix-security-19)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -30,8 +33,12 @@
     - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periscope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundaryndss-19)
 
 - [Anti-Fuzzing](#anti-fuzzing)
-    - [FUZZIFICATION: Anti-Fuzzing Techniques(Usenix 19)](#fuzzification-anti-fuzzing-techniquesusenix-19)
-    - [ANTIFUZZ: Impeding Fuzzing Audits of Binary Executables](#antifuzz-impeding-fuzzing-audits-of-binary-executablesusenix-19)
+    - [FUZZIFICATION: Anti-Fuzzing Techniques(Usenix Security 19)](#fuzzification-anti-fuzzing-techniquesusenix-19)
+    - [ANTIFUZZ: Impeding Fuzzing Audits of Binary Executables(Usenix Security 19)](#antifuzz-impeding-fuzzing-audits-of-binary-executablesusenix-19)
+
+- [IoT Fuzzing](#iot-fuzzing)
+    - [IoTFuzzer: Discovering Memory Corruptions in IoT Through App-based Fuzzing(NDSS 18)](#iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzingndss-18)
+    - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation(Usenix Security 19)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulationusenix-security-19)
 
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
@@ -209,12 +216,27 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 
 * [paper](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04A-5_Zhao_paper.pdf)
 
+## EnFuzz: Ensemble Fuzzing with Seed Synchronization among Diverse Fuzzers(Usenix Security 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/usenix19_enfuzz.pdf)
+* [code](https://github.com/enfuzz/enfuzz)
+
+## MOPT: Optimize Mutation Scheduling for Fuzzers(Usenix Security 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/usenix19_mopt.pdf)
+* [code](https://github.com/puppet-meteor/MOpt-AFL)
+
+## GRIMOIRE: Synthesizing Structure while Fuzzing(Usenix Security 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/usenix19_grimoire.pdf)
+* [code](https://github.com/RUB-SysSec/grimoire)
+
 # Directed Fuzzing
 
 ## Directed Greybox Fuzzing(CCS 17)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/CCS17_aflgo.pdf)
-* [source code](https://github.com/aflgo/aflgo)
+* [code](https://github.com/aflgo/aflgo)
 
 ```c
 Input: Seed Input S
@@ -317,11 +339,24 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix19_antifuzz.pdf)
 * [data](https://github.com/RUB-SysSec/antifuzz)
 
+
+# IoT Fuzzing
+
+## IOTFUZZER: Discovering Memory Corruptions in IoT Through App-based Fuzzing(NDSS 18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ndss18_iotfuzzer.pdf)
+
+## FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation(Usenix Security 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix19_FirmAFL.pdf)
+* [code](https://github.com/zyw-200/FirmAFL)
+
 # Evaluate Fuzzing
 
 ## Evaluating Fuzz Testing(CCS 18)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs18_Evaluating%20Fuzz%20Testing.pdf)
+
 
 They found that:
 
