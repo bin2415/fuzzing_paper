@@ -17,6 +17,7 @@
     - [EnFuzz: Ensemble Fuzzing with Seed Synchronization among Diverse Fuzzers(Usenix Security 19)](#enfuzz-ensemble-fuzzing-with-seed-synchronization-among-diverse-fuzzersusenix-security-19)
     - [MOPT: Optimize Mutation Scheduling for Fuzzers(Usenix Security 19)](#mopt-optimize-mutation-scheduling-for-fuzzersusenix-security-19)
     - [GRIMOIRE: Synthesizing Structure while Fuzzing(Usenix Security 19)](#grimoire-synthesizing-structure-while-fuzzingusenix-security-19)
+    - [Ptrix: Efficient Hardware-Assisted Fuzzing for COTS Binary(AsiaCCS 19)](#ptrix-efficient-hardware-assisted-fuzzing-for-cots-binaryasiaccs-19)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -230,6 +231,11 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/usenix19_grimoire.pdf)
 * [code](https://github.com/RUB-SysSec/grimoire)
+
+## Ptrix: Efficient Hardware-Assisted Fuzzing for COTS Binary(AsiaCCS 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/asiaccs19_ptrix.pdf)
+* [code](https://github.com/junxzm1990/afl-pt)
 
 # Directed Fuzzing
 
