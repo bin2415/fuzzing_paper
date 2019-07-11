@@ -240,7 +240,7 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 
 ## SAVIOR: Towards Bug-Driven Hybrid Testing(oakland 20)
 
-* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/asiaccs20_SAVIOR.pdf)
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_SAVIOR.pdf)
 
 # Directed Fuzzing
 
