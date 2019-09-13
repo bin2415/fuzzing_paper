@@ -378,3 +378,7 @@ AFL's coverage measure and stack hashes.
 - Many papers did not carefully consider the impact of seed choices on algorithmic improvements.
 - Papers varied widely on their choice of target programs.
 
+
+# Contributing
+
+Welcome to contribute! Please see instructions [here](./contributing.md).

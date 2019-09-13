@@ -1,4 +1,4 @@
-Welcome to contributing!
+Welcome to contribute! :wave: :wave: :wave:
 
 It's free for everyone to crate a [pull request](https://help.github.com/en/articles/about-pull-requests) for this repo.
 
