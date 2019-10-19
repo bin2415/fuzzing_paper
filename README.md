@@ -19,6 +19,7 @@
     - [GRIMOIRE: Synthesizing Structure while Fuzzing(Usenix Security 19)](#grimoire-synthesizing-structure-while-fuzzingusenix-security-19)
     - [Ptrix: Efficient Hardware-Assisted Fuzzing for COTS Binary(AsiaCCS 19)](#ptrix-efficient-hardware-assisted-fuzzing-for-cots-binaryasiaccs-19)
     - [SAVIOR: Towards Bug-Driven Hybrid Testing(oakland 20)](#savior-towards-bug-driven-hybrid-testingoakland-20)
+    - [Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)](#matryoshka-fuzzing-deeply-nested-branchesccs-19)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -45,6 +46,8 @@
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
 
+- [Smart Contract Fuzzing](#smart-contract-fuzzing)
+    - [Learning to Fuzz from Symbolic Execution with Application to Smart Contracts(CCS 19)](#learning-to-fuzz-from-symbolic-execution-with-application-to-smart-contractsccs-19)
 
 
 
@@ -242,6 +245,10 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_SAVIOR.pdf)
 
+## Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs19_matryoshka.pdf)
+
 # Directed Fuzzing
 
 ## Directed Greybox Fuzzing(CCS 17)
@@ -377,6 +384,11 @@ AFL's coverage measure and stack hashes.
 - Many papers used short timeouts, without justification.
 - Many papers did not carefully consider the impact of seed choices on algorithmic improvements.
 - Papers varied widely on their choice of target programs.
+
+# Smart Contract Fuzzing
+
+## Learning to Fuzz from Symbolic Execution with Application to Smart Contracts(CCS 19)
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs19_ilf.pdf)
 
 
 # Contributing
