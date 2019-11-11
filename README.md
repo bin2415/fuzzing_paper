@@ -20,6 +20,7 @@
     - [Ptrix: Efficient Hardware-Assisted Fuzzing for COTS Binary(AsiaCCS 19)](#ptrix-efficient-hardware-assisted-fuzzing-for-cots-binaryasiaccs-19)
     - [SAVIOR: Towards Bug-Driven Hybrid Testing(oakland 20)](#savior-towards-bug-driven-hybrid-testingoakland-20)
     - [Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)](#matryoshka-fuzzing-deeply-nested-branchesccs-19)
+    - [GREYONE: Data Flow Sensitive Fuzzing(Usenix Security 20)](#greyone-data-flow-sensitive-fuzzingusenix-security-20)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -42,6 +43,7 @@
 - [IoT Fuzzing](#iot-fuzzing)
     - [IoTFuzzer: Discovering Memory Corruptions in IoT Through App-based Fuzzing(NDSS 18)](#iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzingndss-18)
     - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation(Usenix Security 19)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulationusenix-security-19)
+    - [P2IM: Scalable and Hardware-independent Firmware Testing via Automatic Peripheral Interface Modeling(Usenix Security 20)](#P2IM-Scalable-and-hardware-independent-firmware-testing-via-automatic-peripheral-interface-modelinguesnix-security-20)
 
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
@@ -52,7 +54,7 @@
 
 
 
-# Interesting Fuzzing
+# Interesting Fuzz-mg
 
 ## Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)
 
@@ -249,6 +251,10 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ccs19_matryoshka.pdf)
 
+## GREYONE: Data Flow Sensitive Fuzzing(Usenix Security 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/sec20_greyone.pdf)
+
 # Directed Fuzzing
 
 ## Directed Greybox Fuzzing(CCS 17)
@@ -368,6 +374,10 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix19_FirmAFL.pdf)
 * [code](https://github.com/zyw-200/FirmAFL)
+
+## P2IM: Scalable and Hardware-independent Firmware Testing via Automatic Peripheral Interface Modeling(Usenix Security 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/sec20_p2im.pdf)
 
 # Evaluate Fuzzing
 
