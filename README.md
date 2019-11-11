@@ -43,7 +43,7 @@
 - [IoT Fuzzing](#iot-fuzzing)
     - [IoTFuzzer: Discovering Memory Corruptions in IoT Through App-based Fuzzing(NDSS 18)](#iotfuzzer-discovering-memory-corruptions-in-iot-through-app-based-fuzzingndss-18)
     - [FIRM-AFL: High-Throughput Greybox Fuzzing of IoT Firmware via Augmented Process Emulation(Usenix Security 19)](#firm-afl-high-throughput-greybox-fuzzing-of-iot-firmware-via-augmented-process-emulationusenix-security-19)
-    - [P2IM: Scalable and Hardware-independent Firmware Testing via Automatic Peripheral Interface Modeling(Usenix Security 20)](#P2IM-Scalable-and-hardware-independent-firmware-testing-via-automatic-peripheral-interface-modelinguesnix-security-20)
+    - [P2IM: Scalable and Hardware-independent Firmware Testing via Automatic Peripheral Interface Modeling(Usenix Security 20)](#p2im-scalable-and-hardware-independent-firmware-testing-via-automatic-peripheral-interface-modelingusenix-security-20)
 
 - [Evaluate Fuzzing](#evaluate-fuzzing)
     - [Evaluating Fuzz Testing(CCS 18)](#evaluating-fuzz-testingccs-18)
