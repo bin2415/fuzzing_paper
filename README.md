@@ -21,6 +21,9 @@
     - [SAVIOR: Towards Bug-Driven Hybrid Testing(oakland 20)](#savior-towards-bug-driven-hybrid-testingoakland-20)
     - [Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)](#matryoshka-fuzzing-deeply-nested-branchesccs-19)
     - [GREYONE: Data Flow Sensitive Fuzzing(Usenix Security 20)](#greyone-data-flow-sensitive-fuzzingusenix-security-20)
+    - [IJON: Exploring Deep State Spaces via Fuzzing(oakland 20)](#ijon-exploring-deep-state-spaces-via-fuzzingoakland-20)
+    - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(oakland 20)](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstractionoakland-20)
+    - [Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization(ndss 20)](#not-all-coverage-measurements-are-equal-fuzzing-by-coverage-accounting-for-input-prioritizationndss-20)
 
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -35,6 +38,8 @@
     - [kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels(Usenix Security 17)](#kafl-hardware-assisted-feedback-fuzzing-for-os-kernelsusenix-security-17)
     - [Fuzzing File Systems via Two-Dimensional Input Space Exploration(oakland 19)](#fuzzing-file-systems-via-two-dimensional-input-space-explorationoakland-19)
     - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periscope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundaryndss-19)
+    - [KRACE: Data Race Fuzzing for Kernel File Systems(oakland 20)](#krace-data-race-fuzzing-for-kernel-file-systemsoakland-20)
+    - [HFL: Hybrid Fuzzing on the Linux Kernel(ndss 20)](#hfl-hybrid-fuzzing-on-the-linux-kernelndss-20)
 
 - [Anti-Fuzzing](#anti-fuzzing)
     - [FUZZIFICATION: Anti-Fuzzing Techniques(Usenix Security 19)](#fuzzification-anti-fuzzing-techniquesusenix-19)
@@ -246,6 +251,7 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 ## SAVIOR: Towards Bug-Driven Hybrid Testing(oakland 20)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_SAVIOR.pdf)
+* [code] 
 
 ## Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)
 
@@ -254,6 +260,47 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 ## GREYONE: Data Flow Sensitive Fuzzing(Usenix Security 20)
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/sec20_greyone.pdf)
+
+## IJON: Exploring Deep State Spaces via Fuzzing(oakland 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_IJON.pdf)
+* [code](https://github.com/RUB-SysSec/ijon)
+
+In addition to consider the input that reaches new code coverage as seed, it also considers the 
+state spaces(such as the value of a specific variable). Nice try!
+
+## PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(oakland 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_pangolin.pdf)
+
+To be incremental, they propose “polyhedral path abstraction”, which preserves the exploration
+state in the concolic execution stage and allows more effective mutation and constraint solving over existing techniques.
+
+## Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization(ndss 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ndss20_TortoiseFuzz.pdf)
+
+To address the limitation caused by equal coverage, they
+propose coverage accounting, a novel approach that evaluates
+coverage by security impacts. Coverage accounting attributes
+edges by three metrics based on three different levels: function,
+loop and basic block. Based on the proposed metrics, they
+design a new scheme to prioritize fuzzing inputs and develop
+TortoiseFuzz, a greybox fuzzer for finding memory corruption
+vulnerabilities. They evaluated TortoiseFuzz on 30 real-world
+applications and compared it with 6 state-of-the-art greybox and
+hybrid fuzzers: AFL, AFLFast, FairFuzz, MOPT, QSYM, and
+Angora. Statistically, TortoiseFuzz found more vulnerabilities
+than 5 out of 6 fuzzers (AFL, AFLFast, FairFuzz, MOPT, and
+Angora), and it had a comparable result to QSYM yet only
+consumed around 2% of QSYM’s memory usage on average. They
+also compared coverage accounting metrics with two other metrics, AFL-Sensitive and LEOPARD, and TortoiseFuzz performed
+significantly better than both metrics in finding vulnerabilities.
+Furthermore, they applied the coverage accounting metrics to
+QSYM and noticed that coverage accounting helps increase
+the number of discovered vulnerabilities by 28.6% on average.
+TortoiseFuzz found 20 zero-day vulnerabilities with 15 confirmed
+with CVE identifications
 
 # Directed Fuzzing
 
@@ -350,6 +397,30 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 * [paper](https://people.cs.kuleuven.be/~stijn.volckaert/papers/2019_NDSS_PeriScope.pdf)
 * [source code](https://github.com/securesystemslab/periscope)
 
+## KRACE: Data Race Fuzzing for Kernel File Systems(oakland 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_ktrace.pdf)
+
+It proposes a new coverage tracking metric, alias coverage, specially designed to capture
+the exploration progress in the concurrency dimension.
+
+## HFL: Hybrid Fuzzing on the Linux Kernel(ndss 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ndss20_hfl.pdf)
+
+To this end, this paper proposes HFL, which not only
+combines fuzzing with symbolic execution for hybrid fuzzing
+but also addresses kernel-specific fuzzing challenges via three
+distinct features: 1) converting indirect control transfers to direct
+transfers, 2) inferring system call sequence to build a consistent
+system state, and 3) identifying nested arguments types of system
+calls. As a result, HFL found 24 previously unknown vulnerabilities in recent Linux kernels. Additionally, HFL achieves 15%
+and 26% higher code coverage than Moonshine and Syzkaller,
+respectively, and over kAFL/S2E/TriforceAFL, achieving even
+four times better coverage, using the same amount of resources
+(CPU, time, etc.). Regarding vulnerability discovery performance,
+HFL found 13 known vulnerabilities more than three times faster
+than Syzkaller.
 
 # Anti-Fuzzing
 
