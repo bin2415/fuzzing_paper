@@ -399,7 +399,7 @@ After the energy is determined, the fuzzer adaptively allocates mutation budgets
 
 ## KRACE: Data Race Fuzzing for Kernel File Systems(oakland 20)
 
-* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_ktrace.pdf)
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_krace.pdf)
 
 It proposes a new coverage tracking metric, alias coverage, specially designed to capture
 the exploration progress in the concurrency dimension.
