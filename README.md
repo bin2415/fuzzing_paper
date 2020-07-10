@@ -24,13 +24,13 @@
     - [IJON: Exploring Deep State Spaces via Fuzzing(Oakland 20)](#ijon-exploring-deep-state-spaces-via-fuzzingoakland-20)
     - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(Oakland 20)](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstractionoakland-20)
     - [Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization(NDSS 20)](#not-all-coverage-measurements-are-equal-fuzzing-by-coverage-accounting-for-input-prioritizationndss-20)
-    - [Montage: A Neural Network Language Model-Guided JavaScript Engine Fuzzer (Usenix Security 20)]
-    - [Fuzzing JavaScript Engines with Aspect-preserving Mutation (Oakland 20)]
+    - [Montage: A Neural Network Language Model-Guided JavaScript Engine Fuzzer (Usenix Security 20)](#montage-a-neural-network-language-model-guided-javascript-engine-fuzzer-usenix-security-20)
+    - [Fuzzing JavaScript Engines with Aspect-preserving Mutation (Oakland 20)](#fuzzing-javascript-engines-with-aspect-preserving-mutation-oakland-20)
     
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
     - [Hawkeye: Towards a Desired Directed Grey-box Fuzzer(CCS 18)](#hawkeye-towards-a-desired-directed-grey-box-fuzzerccs-18)
-    - [FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning (Usenix Security 20)]
+    - [FuzzGuard: Filtering out Unreachable Inputs in Directed Grey-box Fuzzing through Deep Learning (Usenix Security 20)](#fuzzguard-filtering-out-unreachable-inputs-in-directed-grey-box-fuzzing-through-deep-learning)
 
 - [Fuzzing Machine Learning Model](#fuzzing-machine-learning-model)
     - [TensorFuzz: Debugging Neural Networks with Coverage-Guided Fuzzing(18)](#tensorfuzz-debugging-neural-networks-with-coverage-guided-fuzzing18)
@@ -40,7 +40,7 @@
     - [RAZZER: Finding Kernel Race Bugs through Fuzzing(Oakland 19)](#razzer-finding-kernel-race-bugs-through-fuzzingoakland-19)
     - [kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels(Usenix Security 17)](#kafl-hardware-assisted-feedback-fuzzing-for-os-kernelsusenix-security-17)
     - [Fuzzing File Systems via Two-Dimensional Input Space Exploration(Oakland 19)](#fuzzing-file-systems-via-two-dimensional-input-space-explorationoakland-19)
-    - [Finding Semantic Bugs in File Systems with an Extensible Fuzzing Framework (SOSP 19)]
+    - [Finding Semantic Bugs in File Systems with an Extensible Fuzzing Framework (SOSP 19)](#finding-semantic-bugs-in-file-systems-with-an-extensible-fuzzing-framework-sosp-19)
     - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periscope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundaryndss-19)
     - [KRACE: Data Race Fuzzing for Kernel File Systems(Oakland 20)](#krace-data-race-fuzzing-for-kernel-file-systemsoakland-20)
     - [HFL: Hybrid Fuzzing on the Linux Kernel(NDSS 20)](#hfl-hybrid-fuzzing-on-the-linux-kernelndss-20)
@@ -60,8 +60,8 @@
 - [Smart Contract Fuzzing](#smart-contract-fuzzing)
     - [Learning to Fuzz from Symbolic Execution with Application to Smart Contracts(CCS 19)](#learning-to-fuzz-from-symbolic-execution-with-application-to-smart-contractsccs-19)
 
-- [Web Fuzzing]
-    - [Enemy of the State: A State-Aware Black-Box Web Vulnerability Scanner (Usenix Security 20)]()
+- [Web Fuzzing](#web-fuzzing)
+    - [Enemy of the State: A State-Aware Black-Box Web Vulnerability Scanner (Usenix Security 20)](#enemy-of-the-state-a-state-aware-black-box-web-vulnerability-scanner-usenix-security-12)
 
 
 
@@ -309,11 +309,13 @@ the number of discovered vulnerabilities by 28.6% on average.
 TortoiseFuzz found 20 zero-day vulnerabilities with 15 confirmed
 with CVE identifications
 
-## [Montage: A Neural Network Language Model-Guided JavaScript Engine Fuzzer (Usenix Security 20)](https://wsp-lab.github.io/papers/lee-montage-sec20.pdf)
+## Montage: A Neural Network Language Model-Guided JavaScript Engine Fuzzer (Usenix Security 20)
+- [paper](https://wsp-lab.github.io/papers/lee-montage-sec20.pdf)
 
 This paper proposes neural network language models (NNLMs) guided fuzzer to find bugs in JavaScript engines. The key technique is to reuse existing JavaScript test cases in regression tests, and use NNLMs over ASTs of the JS code to generate better fuzzing inputs.
 
-## [Fuzzing JavaScript Engines with Aspect-preserving Mutation (Oakland 20)](https://jakkdu.github.io/pubs/2020/park:die.pdf)
+## Fuzzing JavaScript Engines with Aspect-preserving Mutation (Oakland 20)
+- [paper]((https://jakkdu.github.io/pubs/2020/park:die.pdf)
 
 # Directed Fuzzing
 
@@ -484,7 +486,8 @@ AFL's coverage measure and stack hashes.
 
 # Web Fuzzing
 
-## [Enemy of the State: A State-Aware Black-Box Web Vulnerability Scanner (USENIX Security 12)](https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final225.pdf)
+## Enemy of the State: A State-Aware Black-Box Web Vulnerability Scanner (USENIX Security 12)
+- [paper](https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final225.pdf)
 
 Complex web applications have many states. For example, a user has to login first to view certain content. Otherwise, the `view` page cannot be fuzzed. This paper proposes a state-aware black-box fuzzing with algorithms to infer and distinguish application states.
 
