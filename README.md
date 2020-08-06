@@ -2,30 +2,33 @@
     - [Coverage-based Greybox Fuzzing as Markov Chain(CCS 16)](#coverage-based-greybox-fuzzing-as-markov-chainccs-16)
     - [T-Fuzz: fuzzing by program transformation(Oakland 18)](#t-fuzz-fuzzing-by-program-transformationoakland-18)
     - [CollAFL: Path Sensitive Fuzzing(Oakland 18)](#collafl-path-sensitive-fuzzingoakland-18)
-    - [Driller: Augmenting Fuzzing Through Selective Symbolic Execution(NDSS 16)](#driller-augmenting-fuzzing-through-selective-symbolic-executionndss-16)
     - [VUzzer: Application-aware Evolutionary Fuzzing(NDSS 17)](#vuzzer-application-aware-evolutionary-fuzzingndss-17)
     - [Angora: Efficient Fuzzing by Principled Search(Oakland 18)](#angora-efficient-fuzzing-by-principled-searchoakland-18))
     - [Designing New Operating Primitives to Improve Fuzzing Performance(CCS 17)](#designing-new-operating-primitives-to-improve-fuzzing-performanceccs-17)
-    - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix Security 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
     - [FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage(ASE 18)](#fairfuzz-a-targeted-mutation-strategy-for-increasing-greybox-fuzz-testing-coveragease-18)
     - [Full-speed Fuzzing: Reducing Fuzzing Overhead through Coverage-guided Tracing(Oakland 19)](#full-speed-fuzzing-reducing-fuzzing-overhead-through-coverage-guided-tracingoakland-19)
     - [ProFuzzer: On-the-fly Input Type Probing for Better Zero-day Vulnerability Discovery(Oakland 19)](#profuzzer-on-the-fly-input-type-probing-for-better-zero-day-vulnerability-discoveryoakland-19)
     - [NEUZZ: Efficient Fuzzing with Neural Program Smoothing(Oakland 19)](#neuzz-efficient-fuzzing-with-neural-program-smoothingoakland-19 )
     - [REDQUEEN: Fuzzing with Input-to-State Correspondence(NDSS 19)](#redqueen-fuzzing-with-input-to-state-correspondencendss-19)
     - [NAUTILUS: Fishing for Deep Bugs with Grammars(NDSS 19)](#nautilus-fishing-for-deep-bugs-with-grammarsndss-19) 
-    - [Send Hardest Problems My Way: Probabilistic Path Prioritization for Hybrid Fuzzing(NDSS 19)](#send-hardest-problems-my-way-probabilistic-path-prioritization-for-hybrid-fuzzingndss-19)   
     - [EnFuzz: Ensemble Fuzzing with Seed Synchronization among Diverse Fuzzers(Usenix Security 19)](#enfuzz-ensemble-fuzzing-with-seed-synchronization-among-diverse-fuzzersusenix-security-19)
     - [MOPT: Optimize Mutation Scheduling for Fuzzers(Usenix Security 19)](#mopt-optimize-mutation-scheduling-for-fuzzersusenix-security-19)
     - [GRIMOIRE: Synthesizing Structure while Fuzzing(Usenix Security 19)](#grimoire-synthesizing-structure-while-fuzzingusenix-security-19)
     - [Ptrix: Efficient Hardware-Assisted Fuzzing for COTS Binary(AsiaCCS 19)](#ptrix-efficient-hardware-assisted-fuzzing-for-cots-binaryasiaccs-19)
-    - [SAVIOR: Towards Bug-Driven Hybrid Testing(Oakland 20)](#savior-towards-bug-driven-hybrid-testingoakland-20)
     - [Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)](#matryoshka-fuzzing-deeply-nested-branchesccs-19)
     - [GREYONE: Data Flow Sensitive Fuzzing(Usenix Security 20)](#greyone-data-flow-sensitive-fuzzingusenix-security-20)
     - [IJON: Exploring Deep State Spaces via Fuzzing(Oakland 20)](#ijon-exploring-deep-state-spaces-via-fuzzingoakland-20)
-    - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(Oakland 20)](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstractionoakland-20)
     - [Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization(NDSS 20)](#not-all-coverage-measurements-are-equal-fuzzing-by-coverage-accounting-for-input-prioritizationndss-20)
     - [Montage: A Neural Network Language Model-Guided JavaScript Engine Fuzzer (Usenix Security 20)](#montage-a-neural-network-language-model-guided-javascript-engine-fuzzer-usenix-security-20)
     - [Fuzzing JavaScript Engines with Aspect-preserving Mutation (Oakland 20)](#fuzzing-javascript-engines-with-aspect-preserving-mutation-oakland-20)
+
+- [Hybrid Fuzzing](#hybrid-fuzzing)
+    - [Driller: Augmenting Fuzzing Through Selective Symbolic Execution(NDSS 16)](#driller-augmenting-fuzzing-through-selective-symbolic-executionndss-16)
+    - [QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix Security 18)](#qsym-a-practical-concolic-execution-engine-tailored-for-hybrid-fuzzingusenix-18)
+    - [Send Hardest Problems My Way: Probabilistic Path Prioritization for Hybrid Fuzzing(NDSS 19)](#send-hardest-problems-my-way-probabilistic-path-prioritization-for-hybrid-fuzzingndss-19)   
+    - [SAVIOR: Towards Bug-Driven Hybrid Testing(Oakland 20)](#savior-towards-bug-driven-hybrid-testingoakland-20)
+    - [PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(Oakland 20)](#pangolin-incremental-hybrid-fuzzing-with-polyhedral-path-abstractionoakland-20)
+    - [Symbolic execution with SymCC: Don’t interpret, compile!(Usenix Security 20)](#symbolic-execution-with-symcc-dont-interpret-compileusenix-security-20) 
     
 - [Directed Fuzzing](#directed-fuzzing)
     - [Directed Greybox Fuzzing(CCS 17)](#directed-greybox-fuzzingccs-17)
@@ -44,6 +47,8 @@
     - [PeriScope: An Effective Probing and Fuzzing Framework for the Hardware-OS Boundary(NDSS 19)](#periscope-an-effective-probing-and-fuzzing-framework-for-the-hardware-os-boundaryndss-19)
     - [KRACE: Data Race Fuzzing for Kernel File Systems(Oakland 20)](#krace-data-race-fuzzing-for-kernel-file-systemsoakland-20)
     - [HFL: Hybrid Fuzzing on the Linux Kernel(NDSS 20)](#hfl-hybrid-fuzzing-on-the-linux-kernelndss-20)
+    - [Agamotto: Accelerating Kernel Driver Fuzzing with Lightweight Virtual Machine Checkpoints(Usenix Security 20)](#agamotto-accelerating-kernel-driver-fuzzing-with-lightweight-virtual-machine-checkpointsusenix-security-20)
+    - [USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulation(Usenix Security 20)](#usbfuzz-a-framework-for-fuzzing-usb-drivers-by-device-emulationusenix-security-20)
 
 - [Anti-Fuzzing](#anti-fuzzing)
     - [FUZZIFICATION: Anti-Fuzzing Techniques(Usenix Security 19)](#fuzzification-anti-fuzzing-techniquesusenix-19)
@@ -124,12 +129,6 @@ CollAFL通过三种方式来解决hash collision:
 3. 如果前面两种方法无法解决，则动态的时候为每条边分配不同的id。
 
 
-## Driller: Augmenting Fuzzing Through Selective Symbolic Execution(NDSS 16)
-
-* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/NDSS16_driller.pdf)
-* [source code](https://github.com/shellphish/driller)
-
-我们都知道，fuzzing对于一些比较宽松的限制(比如x>0)能够很容易的通过变异产生一些输入达到该条件；而symbolic execution非常擅长求解一下magic value(比如x == deadleaf)。这是一篇比较经典的将concolic execution和fuzzing结合在一起的文章，该文章的主要思想就是先用AFL等Fuzzer根据seed进行变异，来测试程序。当产生的输入一直走某些路径，并没有探测到新的路径时，此时就"stuck"了。这时，就是用concolic execution来产生输入，保证该输入能走到一些新的分支。从而利用concolic execution来辅助fuzz。
 
 ## VUzzer: Application-aware Evolutionary Fuzzing(NDSS 17)
 
@@ -178,6 +177,28 @@ This paper's contributions:
 * [source code](https://github.com/sslab-gatech/qsym)
 
 该paper是Usenix 18的Distinguished Paper，其主要针对了当前的concolic execution的三个方面进行了优化: Slow Symbolic Emulation, Ineffective Snapshot and Slow and Inflexible Sound Analysis. 从而使得concolic execution更好的适应fuzzing场景。
+
+## Send Hardest Problems My Way: Probabilistic Path Prioritization for Hybrid Fuzzing(NDSS 19)
+
+* [paper](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04A-5_Zhao_paper.pdf)
+
+## SAVIOR: Towards Bug-Driven Hybrid Testing(Oakland 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_SAVIOR.pdf)
+* [code](https://github.com/evanmak/savior-source)
+
+## PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(Oakland 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_pangolin.pdf)
+
+To be incremental, they propose “polyhedral path abstraction”, which preserves the exploration
+state in the concolic execution stage and allows more effective mutation and constraint solving over existing techniques.
+
+## Symbolic execution with SymCC: Don't interpret, compile!(Usenix Security 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix20_symcc.pdf)
+* [code](https://github.com/eurecom-s3/symcc)
+
 
 ### Motivation: Performance Bottlenecks
 
@@ -254,10 +275,6 @@ Second, FairFuzz uses a novel lightweight mutation technique to increase the pro
 * [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/asiaccs19_ptrix.pdf)
 * [code](https://github.com/junxzm1990/afl-pt)
 
-## SAVIOR: Towards Bug-Driven Hybrid Testing(Oakland 20)
-
-* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_SAVIOR.pdf)
-* [code] 
 
 ## Matryoshka: Fuzzing Deeply Nested Branches(CCS 19)
 
@@ -276,12 +293,6 @@ The key insight in this paper is to add data flow (or more specifically, taint i
 
 In addition to considering the input that reaches new code coverage as seed, it also considers the  state spaces(such as the value of a specific variable). Nice try!
 
-## PANGOLIN: Incremental Hybrid Fuzzing with Polyhedral Path Abstraction(Oakland 20)
-
-* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/oakland20_pangolin.pdf)
-
-To be incremental, they propose “polyhedral path abstraction”, which preserves the exploration
-state in the concolic execution stage and allows more effective mutation and constraint solving over existing techniques.
 
 ## Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input Prioritization(NDSS 20)
 
@@ -316,6 +327,24 @@ This paper proposes neural network language models (NNLMs) guided fuzzer to find
 
 ## Fuzzing JavaScript Engines with Aspect-preserving Mutation (Oakland 20)
 - [paper]((https://jakkdu.github.io/pubs/2020/park:die.pdf)
+
+## Hybrid Fuzzing
+
+## Driller: Augmenting Fuzzing Through Selective Symbolic Execution(NDSS 16)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/tree/master/paper/NDSS16_driller.pdf)
+* [source code](https://github.com/shellphish/driller)
+
+## QSYM: A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing(Usenix 18)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix18_qsym.pdf)
+* [source code](https://github.com/sslab-gatech/qsym)
+
+该paper是Usenix 18的Distinguished Paper，其主要针对了当前的concolic execution的三个方面进行了优化: Slow Symbolic Emulation, Ineffective Snapshot and Slow and Inflexible Sound Analysis. 从而使得concolic execution更好的适应fuzzing场景。
+
+
+我们都知道，fuzzing对于一些比较宽松的限制(比如x>0)能够很容易的通过变异产生一些输入达到该条件；而symbolic execution非常擅长求解一下magic value(比如x == deadleaf)。这是一篇比较经典的将concolic execution和fuzzing结合在一起的文章，该文章的主要思想就是先用AFL等Fuzzer根据seed进行变异，来测试程序。当产生的输入一直走某些路径，并没有探测到新的路径时，此时就"stuck"了。这时，就是用concolic execution来产生输入，保证该输入能走到一些新的分支。从而利用concolic execution来辅助fuzz。
+
 
 # Directed Fuzzing
 
@@ -435,6 +464,16 @@ the exploration progress in the concurrency dimension.
 
 To this end, this paper proposes HFL, which not only combines fuzzing with symbolic execution for hybrid fuzzing but also addresses kernel-specific fuzzing challenges via three distinct features: 1) converting indirect control transfers to direct transfers, 2) inferring system call sequence to build a consistent system state, and 3) identifying nested arguments types of system calls. As a result, HFL found 24 previously unknown vulnerabilities in recent Linux kernels. Additionally, HFL achieves 15% and 26% higher code coverage than Moonshine and Syzkaller, respectively, and over kAFL/S2E/TriforceAFL, achieving even four times better coverage, using the same amount of resources (CPU, time, etc.). Regarding vulnerability discovery performance, HFL found 13 known vulnerabilities more than three times faster
 than Syzkaller.
+
+## Agamotto: Accelerating Kernel Driver Fuzzing with Lightweight Virtual Machine Checkpoints(Usenix Security 20)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix20_agamotto.pdf)
+* [code](https://github.com/securesystemslab/agamotto)
+
+## USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulation(Usenix Security 20) 
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix20_usbfuzz.pdf)
+* [code](https://github.com/HexHive/USBFuzz)
 
 # Anti-Fuzzing
 
