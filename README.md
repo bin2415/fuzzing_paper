@@ -50,6 +50,9 @@
     - [Agamotto: Accelerating Kernel Driver Fuzzing with Lightweight Virtual Machine Checkpoints(Usenix Security 20)](#agamotto-accelerating-kernel-driver-fuzzing-with-lightweight-virtual-machine-checkpointsusenix-security-20)
     - [USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulation(Usenix Security 20)](#usbfuzz-a-framework-for-fuzzing-usb-drivers-by-device-emulationusenix-security-20)
 
+- [Hypervisor Fuzzing](#hypervisor-fuzzing)
+    - [HYPER-CUBE: High-Dimensional Hypervisor Fuzzing(NDSS 2020)](#hypercube-highdimensional-hypervisor-fuzzingndss-2020)
+
 - [Anti-Fuzzing](#anti-fuzzing)
     - [FUZZIFICATION: Anti-Fuzzing Techniques(Usenix Security 19)](#fuzzification-anti-fuzzing-techniquesusenix-19)
     - [ANTIFUZZ: Impeding Fuzzing Audits of Binary Executables(Usenix Security 19)](#antifuzz-impeding-fuzzing-audits-of-binary-executablesusenix-19)
@@ -474,6 +477,13 @@ than Syzkaller.
 
 * [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/usenix20_usbfuzz.pdf)
 * [code](https://github.com/HexHive/USBFuzz)
+
+# Hypervisor Fuzzing
+
+## HYPER-CUBE: High-Dimensional Hypervisor Fuzzing(NDSS 2020)
+
+* [paper](https://github.com/bin2415/fuzzing_paper/blob/master/paper/ndss2020_hyper_cube.pdf)
+* [code](https://github.com/RUB-SysSec/hypercube)
 
 # Anti-Fuzzing
 
