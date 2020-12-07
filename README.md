@@ -71,7 +71,10 @@
 - [Web Fuzzing](#web-fuzzing)
     - [Enemy of the State: A State-Aware Black-Box Web Vulnerability Scanner (Usenix Security 20)](#enemy-of-the-state-a-state-aware-black-box-web-vulnerability-scanner-usenix-security-12)
 
-
+- [Other resources](#other-resources)
+    - [fuzzilli](#fuzzilli)
+    - [fuzzos](#fuzzos)
+    - [gustave](#gustave)
 
 # Interesting Fuzz-mg
 
@@ -541,6 +544,24 @@ AFL's coverage measure and stack hashes.
 
 Complex web applications have many states. For example, a user has to login first to view certain content. Otherwise, the `view` page cannot be fuzzed. This paper proposes a state-aware black-box fuzzing with algorithms to infer and distinguish application states.
 
+# Other Resources
+
+## Fuzzilli
+
+- [link](https://github.com/googleprojectzero/fuzzilli)
+
+Fuzz javascrpt language by mutating on Fuzzil(an IR).
+
+## FuzzOS
+
+- [link](https://gamozolabs.github.io/fuzzing/2020/12/06/fuzzos.html)
+
+## gustave
+
+- [link](https://github.com/airbus-seclab/gustave)
+Embedded OS kernel fuzzer
+
 # Contributing
 
 Welcome to contribute! Please see instructions [here](./contributing.md).
+
