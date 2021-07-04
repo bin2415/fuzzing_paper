@@ -71,6 +71,9 @@
 - [Web Fuzzing](#web-fuzzing)
     - [Enemy of the State: A State-Aware Black-Box Web Vulnerability Scanner (Usenix Security 20)](#enemy-of-the-state-a-state-aware-black-box-web-vulnerability-scanner-usenix-security-12)
 
+
+- [JS Fuzzing](#js-fuzzing)
+
 - [Other resources](#other-resources)
     - [fuzzilli](#fuzzilli)
     - [fuzzos](#fuzzos)
@@ -543,6 +546,31 @@ AFL's coverage measure and stack hashes.
 - [paper](https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final225.pdf)
 
 Complex web applications have many states. For example, a user has to login first to view certain content. Otherwise, the `view` page cannot be fuzzed. This paper proposes a state-aware black-box fuzzing with algorithms to infer and distinguish application states.
+
+
+
+# JS Fuzzing
+
+## Fuzzing with Code Fragments (USENIX Security 12)
+- [Paper](https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final73.pdf)
+
+## Fuzzing JavaScript Engines with Aspect-preserving Mutation (SP 19)
+- [Paper](https://taesoo.kim/pubs/2020/park:die.pdf)
+- [code](https://github.com/sslab-gatech/DIE)
+
+## CodeAlchemist: Semantics-Aware Code Generation to Find Vulnerabilities in JavaScript Engines (NDSS 21)
+- [paper](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_05A-5_Han_paper.pdf)
+
+## Montage: A Neural Network Language Model-Guided JavaScript Engine Fuzzer (USENIX Security 20)
+- [paper](https://www.usenix.org/system/files/sec20summer_lee-suyoung_prepub_0.pdf)
+- [code](https://github.com/WSP-LAB/Montage)
+
+## Favocado: Fuzzing the Binding Code of JavaScript Engines Using Semantically Correct Test Cases (NDSS 21)
+- [paper](https://sefcom.asu.edu/publications/favocado-ndss21.pdf)
+
+## Automated Conformance Testing for JavaScript Engines via Deep Compiler Fuzzing (PLDI 21)
+- [paper](https://arxiv.org/pdf/2104.07460.pdf)
+- [code](https://github.com/NWU-NISL-Fuzzing/COMFORT)
 
 # Other Resources
 
